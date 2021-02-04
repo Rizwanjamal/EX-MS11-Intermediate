@@ -71,4 +71,89 @@ hotpot.splice(2, 0, saadaRoti.join())
 
 //-----------------------------------------------------------------------
 
+// ForEach 
 
+// Example-1
+function withoutForEach() {
+  for(var i = studentNames.length-1 ; i >= 0 ; i--) {
+    console.log('student Name :', studentNames[i])
+  }
+}
+
+// Example-2
+function usingForEach() {
+  studentNames.forEach(function (name) {
+    console.log('student Name :', name)
+  })
+}
+
+// ----------------------------------------
+// Find
+
+studentNames.find(function (name) {
+  return name == 'Rizwan'
+})
+
+// Output will be 'Rizwan'
+
+// ----------------------------------------
+// Map
+
+familyTree = ['Dada', 'Abba', 'Beta']
+
+// Example-1
+familyTree.map(function (member) {
+    if (member !== 'Beta') return member + ' Jee'
+    return member
+})
+// Output will be: [''Dada Jee', 'Abba Jee', undefined]
+
+// Example-2
+familyTree.map(function (member) {
+    if (member !== 'Beta') return member + ' Jee'
+})
+// Output will be: [''Dada Jee', 'Abba Jee', Beta]
+
+// Example-3
+a = [2,4,6,8]
+b = a.map(function (num) {
+    return num * 2;
+})
+// Output will be [4,8,12,16]
+
+// ----------------------------------------
+// forEAch
+
+var newNum = [];
+
+a.forEach(function (num) {
+    var b = num * 2;
+    newNum.push(b)
+})
+
+// ----------------------------------------
+// isArray
+
+if([].length) {
+  console.log('calling')
+}
+
+if(Array.isArray([])) {
+  console.log('calling')
+}
+
+// ---------------------------------------
+// concat
+
+a = [1,2,3]
+b = [4,5,6]
+a.concat(b)
+// output will be [1,2,3,4,5,6]
+
+a = ['a','b','c']
+
+a.join('')
+// output will be 'abc'
+
+a.join(' / ')
+// output will be 'a / b / c'
